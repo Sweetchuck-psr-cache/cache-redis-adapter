@@ -12,13 +12,14 @@ declare(strict_types = 1);
  * with this source code in the file LICENSE.
  */
 
-namespace Cache\Adapter\Redis\Tests;
+namespace Cache\Adapter\Redis\Tests\Acceptance;
 
-use Cache\IntegrationTests\HierarchicalCachePoolTest;
+use Cache\Adapter\Redis\Tests\Helper\CreateRedisPoolTrait;
+use Cache\IntegrationTests\SimpleCacheTest as BaseTest;
 
-class ClusterIntegrationHierarchyTest extends HierarchicalCachePoolTest
+class IntegrationSimpleCacheTest extends BaseTest
 {
-    use CreateRedisClusterPoolTrait;
+    use CreateRedisPoolTrait;
 
     /**
      * @after
